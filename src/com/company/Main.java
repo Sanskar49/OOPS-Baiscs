@@ -26,6 +26,16 @@ public class Main {
         int a = vm.getHealth();
         System.out.println("After using the getter and setter, my health is "+ a);
 
+        DummyClass obj = new DummyClass();
+        DummyClass obj1 = new DummyClass();
+        obj.setValues(2,5);
+        obj1.setValues(3,6);
+        obj.Area();
+        obj1.Area();
+        //Not created any object of SomStatic but still able to access its properties because of static keywords.
+        SomStatic.Tell();
+        System.out.println("The count is " + SomStatic.count);
+
 
     }
 }

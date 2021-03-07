@@ -11,7 +11,7 @@ public class Enemy {
         this.health = x;
     }
 
-    public void Talk() {
+    public  void Talk() {
         System.out.println("I am an animal you see");
     }
 }
