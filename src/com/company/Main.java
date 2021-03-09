@@ -3,6 +3,7 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
+
         Enemy en = new Enemy();
         //Example of Abstraction.
         //You only care about the method being implemented and not really care about the implementation.
@@ -34,7 +35,21 @@ public class Main {
         obj1.Area();
         //Not created any object of SomStatic but still able to access its properties because of static keywords.
         SomStatic.Tell();
-        System.out.println("The count is " + SomStatic.count);
+        System.out.println("The count is so " + SomStatic.count);
+        classA superobj = new classA();
+
+        superobj.showij();
+        classB subobj = new classB();
+        subobj.sum();
+        Actor ac1 = new Actor("Amitabh", "Brown" , 2 , 1965);
+        String ans = ac1.toString();
+        System.out.println(ans);
+        //This is for implementing one interface but have to define methods of another interface which the first one had extended.
+        subobj.meth1();
+        subobj.meth3();
+
+
+
 
 
     }
