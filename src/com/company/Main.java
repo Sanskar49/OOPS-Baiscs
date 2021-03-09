@@ -47,6 +47,11 @@ public class Main {
         //This is for implementing one interface but have to define methods of another interface which the first one had extended.
         subobj.meth1();
         subobj.meth3();
+        //One class is implementing two interfaces which could work like multiple inheritance.
+        Minheritence m = new Minheritence();
+        m.eat();
+        m.travel();
+
 
 
 
