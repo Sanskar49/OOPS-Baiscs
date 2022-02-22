@@ -52,6 +52,81 @@ public class Main {
         m.eat();
         m.travel();
 
+        Account first = new Account("Sujal","10/22/1999","SBI",22005237) {
+            @Override
+            public void deposit(double amount) {
+
+            }
+
+            @Override
+            public void withdraw(double amount) {
+
+            }
+
+            @Override
+            public boolean transfer(double amount) {
+                return false;
+            }
+
+            @Override
+            public void currentBalance(double balance) {
+
+            }
+
+            @Override
+            public void bankStatement(String name, String bankName, double balance) {
+
+            }
+        };
+
+        Account second = new Account("Rashi","19/1/1997","ICICI",22006247) {
+            @Override
+            public void deposit(double amount) {
+
+            }
+
+            @Override
+            public void withdraw(double amount) {
+
+            }
+
+            @Override
+            public boolean transfer(double amount) {
+                return false;
+            }
+
+            @Override
+            public void currentBalance(double balance) {
+
+            }
+
+            @Override
+            public void bankStatement(String name, String bankName, double balance) {
+
+            }
+        };
+        //depositing money on account of Sujal
+        first.deposit(500);
+
+        //depositing money on acoount of Rasi
+        second.deposit(200);
+
+        double transferAmount = 200;
+
+        //transfer part of the money from the account of Sujal to the account of Rashi
+        boolean result = first.transfer(transferAmount);
+        if(result) {
+            second.deposit(transferAmount);
+        }
+        //withdraw part of the received money from the account of Rashi
+        second.withdraw(transferAmount);
+
+        //print bank statement of Sujal's account
+        first.bankStatement("Sujal","SBI",300);
+
+        //current Balance of Rashi's bank account.
+        second.currentBalance(200);
+
 
 
 
